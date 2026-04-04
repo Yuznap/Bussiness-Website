@@ -1,0 +1,288 @@
+/* Imporing Google Fonts  */
+@import url("https://fonts.googleapis.com/css2?family=Miniver&family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap");
+
+* {
+  font-family: "Poppins", sans-serif;
+  padding: 0%;
+  margin: 0%;
+  box-sizing: border-box;
+}
+
+/* These Are Root Elements */
+:root {
+  /* COLORS */
+  --white-color: #fff;
+  --dark-color: #252525;
+  --primary-color: #3b141c;
+  --secondary-color: #f39616;
+  --light-pink-color: #faf4f5;
+  --medium-gray-color: #ccc;
+
+  /* Font size */
+  --font-size-s: 0.9rem;
+  --font-size-n: 1rem;
+  --font-size-m: 1.12rem;
+  --font-size-l: 1.5rem;
+  --font-size-x1: 2rem;
+  --font-size-xx1: 2.3rem;
+
+  /* Font weight */
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+
+  /* BORDER Radius */
+  --border-radius-s: 8px;
+  --border-radius-m: 30px;
+  --border-radius-circle: 50%;
+
+  /* SITE MAX WIDTH */
+  --site-max-width: 1300px;
+}
+
+/* Styling For Whole Site */
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.section-content {
+  max-width: var(--site-max-width);
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.overlay {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+
+  background: black;
+  background: rgba(0, 0, 0, 0.8);
+
+  filter: blur(4px);
+  -o-filter: blur(4px);
+  -ms-filter: blur(4px);
+  -moz-filter: blur(4px);
+  -webkit-filter: blur(4px);
+}
+/* NAVBAR STYLING  */
+
+header {
+  background-color: var(--primary-color);
+  position: fixed;
+  width: 100%;
+
+  z-index: 5;
+}
+
+.nav-bar .logo .logo-text {
+  color: var(--white-color);
+  font-size: var(--font-size-x1);
+  font-weight: var(--font-weight-semibold);
+}
+
+.nav-bar .nav-menu .nav-link {
+  padding: 10px 18px;
+  color: var(--white-color);
+  border-radius: var(--border-radius-m);
+  font-size: var(--font-size-m);
+  transition: 0.3s ease;
+}
+
+.nav-bar .nav-menu .nav-link:hover {
+  color: var(--primary-color);
+  background: var(--secondary-color);
+}
+
+.nav-bar .nav-menu {
+  display: flex;
+  gap: 10px;
+}
+
+header .nav-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.nav-bar :where(#menu-close-button, #menu-open-button) {
+  display: none;
+}
+
+#menu-close-button,
+#menu-open-button {
+  display: none;
+}
+
+/* HERO SECTION */
+
+.hero-section {
+  background-color: var(--primary-color);
+  min-height: 100vh;
+}
+.hero-section .section-content {
+  display: flex;
+  align-items: center;
+  height: 100vh;
+  color: var(--white-color);
+  justify-content: space-between;
+  background-color: var(--primary-color);
+}
+
+.hero-section .section-content .hero-image-wrapper {
+  max-width: 430px;
+  margin-right: 50px;
+}
+.hero-section .section-content .hero-details .title {
+  font-size: var(--font-size-xx1);
+  font-family: "Miniver", sans-serif;
+  color: var(--secondary-color);
+}
+.hero-section .section-content .hero-details .subtitle {
+  font-size: var(--font-size-x1);
+  margin-top: 8px;
+  max-width: 70%;
+  font-weight: var(--font-weight-semibold);
+}
+.hero-section .section-content .hero-details .description {
+  max-width: 70%;
+  font-size: var(--font-size-m);
+  margin: 24px 0 40px;
+}
+
+.hero-section .section-content .hero-details .buttons {
+  display: flex;
+  gap: 23px;
+}
+
+.hero-section .section-content .hero-details .buttons .button {
+  padding: 10px 26px;
+  border: 2px solid transparent;
+  color: var(--primary-color);
+  border-radius: var(--border-radius-m);
+  background: var(--secondary-color);
+  font-weight: var(--font-weight-medium);
+  transition: 0.3s ease;
+}
+
+.hero-section .section-content .hero-details .buttons .button:hover,
+.hero-section .section-content .hero-details .buttons .contact-us {
+  color: var(--white-color);
+  border-color: var(--white-color);
+  background: transparent;
+}
+
+.hero-section .section-content .hero-details .buttons .contact-us:hover {
+  color: var(--primary-color);
+  border-color: var(--secondary-color);
+  background: var(--secondary-color);
+}
+
+/* LETS MAKE IT RESPONSIVE */
+
+@media (max-width: 871px) {
+  :root {
+    --font-size-s: 0.9rem;
+    --font-size-n: 1rem;
+    --font-size-m: 1rem;
+    --font-size-l: 1rem;
+    --font-size-xl: 1.5rem;
+    --font-size-xxl: 1.8rem;
+  }
+  header .nav-bar .nav-menu {
+    background: linear-gradient(180deg, #ffffff, #f7e9ec, #ead1d6);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+
+    /* OVERLAY  */
+    position: fixed;
+    top: 0;
+    left: -450px;
+    width: 50%;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 100px;
+    transition: left 0.2s ease;
+  }
+
+  header .nav-bar .nav-menu .nav-link {
+    color: var(--dark-color);
+    font-size: var(--font-size-l);
+    display: block;
+    margin-top: 40px;
+  }
+
+  /* NAV BUTTONS */
+
+  header .nav-bar #menu-close-button {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+  }
+
+  header .nav-bar #menu-open-button {
+    color: var(--white-color);
+  }
+  #menu-close-button,
+  #menu-open-button {
+    display: block;
+  }
+
+  .nav-bar :where(#menu-close-button, #menu-open-button) {
+    font-size: var(--font-size-l);
+  }
+
+  /* // Making hero section resposive  */
+
+  .hero-section .section-content {
+    flex-direction: column-reverse;
+    justify-content: center;
+    /* text-align: center; */
+    gap: 25px;
+  }
+  .hero-section .section-content .hero-image-wrapper {
+    max-width: 320px;
+    margin-right: 0%;
+    /* border: #f39616 dotted 13px; */
+    /* border-radius: 10%; */
+    /* justify-content: center; */
+  }
+  .hero-section .section-content .hero-details .title {
+    min-width: 100%;
+    text-align: center;
+  }
+
+  .hero-section .section-content .hero-details .subtitle {
+    min-width: 100%;
+    text-align: center;
+  }
+  .hero-section .section-content .hero-details .description {
+    min-width: 100%;
+    text-align: center;
+  }
+  .hero-section .section-content .hero-details .buttons {
+    justify-content: center;
+    gap: 15px;
+  }
+}
