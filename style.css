@@ -198,6 +198,51 @@ header .nav-bar {
   background: var(--secondary-color);
 }
 
+/* MAKING ABOUT SECTION */
+
+.about-section {
+  background-color: var(--light-pink-color);
+  padding: 3rem;
+}
+.about-section .section-content {
+  /* width: 100%; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 4rem;
+  gap: 3rem;
+}
+.about-section .section-content .about-image-wrapper {
+  height: 300px;
+  width: 550px;
+}
+
+.about-section .section-content .about-image-wrapper > img {
+  border-radius: 50%;
+  height: 100%;
+}
+
+/* About Text  */
+.about-section .section-content .about-details .about-title {
+  text-align: center;
+  font-size: var(--font-size-xx1);
+  font-weight: var(--font-weight-semibold);
+}
+.about-section .section-content .about-details .about-para {
+  text-align: center;
+  font-size: var(--font-size-m);
+  padding: 1rem;
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
+/* SOCIAL ICONS */
+.about-section .section-content .about-details .social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  font-size: 1.3rem;
+  padding: 1rem;
+}
 /* LETS MAKE IT RESPONSIVE */
 
 @media (max-width: 871px) {
@@ -284,5 +329,41 @@ header .nav-bar {
   .hero-section .section-content .hero-details .buttons {
     justify-content: center;
     gap: 15px;
+  }
+
+  /* // Resposive About Section */
+
+  .about-section {
+    padding: 1.5rem;
+  }
+  .about-section .section-content {
+    /* width: 100%; */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0rem;
+    gap: 2rem;
+  }
+  .about-section .section-content .about-image-wrapper {
+    height: 250px;
+    width: 250px;
+  }
+
+  /* About Text  */
+
+  .about-section .section-content .about-details .about-para {
+    text-align: center;
+    font-size: var(--font-size-m);
+    padding-top: 0rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+  /* SOCIAL ICONS */
+  .about-section .section-content .about-details .social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    font-size: 1.3rem;
+    padding: 1rem;
   }
 }
